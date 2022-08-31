@@ -53,6 +53,9 @@ button:hover {
   background-color: #a2a8d3;
 }
 
+.github-link {
+  text-decoration: none;
+}
 .main-content {
   margin: 50px auto;
   max-width: 70%;
