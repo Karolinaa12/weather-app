@@ -1,0 +1,185 @@
+body {
+  font-family: "PT Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+  font-weight: 500;
+  color: black;
+}
+
+p {
+  font-size: 18px;
+}
+#date {
+  margin-bottom: 0;
+}
+form {
+  margin: 50px 0px;
+}
+
+input[type="text"] {
+  width: 60%;
+  height: 40px;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  font-size: 18px;
+}
+
+button[type="submit"],
+#current-location-button {
+  padding: 15px 25px;
+  margin: 20px 0;
+  border: none;
+  background-color: #b6bdee;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  background-color: #a2a8d3;
+}
+#current-location-button:hover {
+  background-color: #a2a8d3;
+}
+
+.main-content {
+  margin: 50px auto;
+  max-width: 70%;
+}
+
+.main-menu-header {
+  margin: 10px auto;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.card-body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(242, 235, 243) 0%,
+    rgb(234, 241, 249) 90.1%
+  );
+
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+.card-body:hover {
+  background: linear-gradient(
+    109.6deg,
+    rgb(177, 173, 219) 11.2%,
+    rgb(245, 226, 226) 91.1%
+  );
+}
+
+.descripton {
+  text-align: center;
+  font-size: 18px;
+}
+
+.details {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.details-header {
+  font-size: 18px;
+}
+.details-list {
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  font-weight: 500;
+}
+
+.details-data {
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.today-header {
+  font-size: 50px;
+}
+
+.temperature {
+  font-size: 50px;
+}
+
+.temperature-units {
+  position: relative;
+  top: -22px;
+  font-size: 20px;
+}
+
+#fahrenheit-link,
+#celcius-link {
+  text-decoration: none;
+}
+
+.temperature-other-days {
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.days {
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.fa-sun {
+  font-size: 150px;
+  color: #5c5470;
+  margin: 50px auto;
+}
+
+.fa-cloud,
+.fa-cloud-sun,
+.sun-today {
+  font-size: 50px;
+  color: #5c5470;
+  margin: 20px;
+  margin-bottom: 5px;
+}
+
+.other-dates-icons {
+  font-size: 30px;
+  margin: 10px auto;
+}
+
+.center {
+  text-align: center;
+  width: 100%;
+}
+
+.container .text-center {
+  font-size: 18px;
+  border: solid 1px #dbd8e3;
+  border-radius: 10px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+footer {
+  font-family: "PT Mono", monospace;
+  color: #5c5470;
+  text-align: center;
+  font-size: 14px;
+}
