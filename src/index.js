@@ -54,6 +54,9 @@ function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#icon");
 
   console.log(response.data);
+
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
@@ -93,18 +96,28 @@ form.addEventListener("submit", handleSubmit);
 //3 converting celcius to fahrenheit
 function convertToF(event) {
   event.preventDefault();
-  temperature.innerHTML = Math.round(23 * 1.8 + 32);
+  let temperatureElement = document.querySelector("#temperature-display");
+
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+  let fahrenheitTemperature = celsiusTemperature * 1.8 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
 function convertToC(event) {
   event.preventDefault();
-  temperature.innerHTML = 23;
-}
-let temperature = document.querySelector("#temperature-display");
+  let temperatureElement = document.querySelector("#temperature-display");
 
-let celciusUnit = document.querySelector("#celcius-link");
-let farenheitUnit = document.querySelector("#fahrenheit-link");
-farenheitUnit.addEventListener("click", convertToF);
-celciusUnit.addEventListener("click", convertToC);
+  celsiusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToC);
+
+let farenheitLink = document.querySelector("#fahrenheit-link");
+farenheitLink.addEventListener("click", convertToF);
 
 //current location
 function getCurrentLocation(event) {
@@ -123,6 +136,7 @@ function showLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
+let celsiusTemperature = null;
 //Current location button
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);

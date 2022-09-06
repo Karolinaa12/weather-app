@@ -41,15 +41,15 @@ button[type="submit"],
   transition: all 200ms ease-in-out;
 }
 
-#date {
-  margin-bottom: 0;
-}
-
 button:hover {
   background-color: #a2a8d3;
 }
 #current-location-button:hover {
   background-color: #a2a8d3;
+}
+
+#date {
+  margin-bottom: 0;
 }
 
 .github-link {
@@ -116,8 +116,12 @@ button:hover {
 }
 
 #fahrenheit-link,
-#celcius-link {
+#celsius-link {
   text-decoration: none;
+}
+.active {
+  color: #202124;
+  cursor: default;
 }
 
 .temperature-other-days {
