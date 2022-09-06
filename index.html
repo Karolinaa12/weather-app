@@ -28,19 +28,34 @@
 <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
+
+
+
+
   <body>
     <div class="container">
-        
-      <div class="main-menu-header">
-        <form id="search-engine">
-          <div class="center">
-            <input type="text" placeholder="Search City" autocomplete="off" autofocus="on" id="city-input"/>
-            <!--<input type="submit" value="Search"/>-->
-            <button type="submit" value="Search"><i class="fa fa-search"></i></button>
-            <button id="current-location-button">Current location</button>
+        <div class="weather-app-wrapper">
+          <div class="weather-app">
+
+     
+        <form id="search-engine" class="mb-3">
+          <div class="row">
+          <div class="col-8">
+            <input type="search" placeholder="Type a city..." autocomplete="off" id="city-input"/>
           </div>
+
+          <div class="col-2">
+            <button type="submit" value="Search"><i class="fa fa-search"></i></button>
+          </div>
+          <div class="col-2">
+            
+            <button id="current-location-button"><i class="fa-sharp fa-solid fa-location-dot"></i></button>
+          </div>
+          
+          </div>
+       
         </form>
-      </div>
+     
 
       <div class="main-content">
         <div class="card border-light mb-3">
@@ -49,7 +64,7 @@
             <p id = "date"> </p>
             <div class = "descripton" id="description"> </div>
 
-            <i class="fa-solid fa-sun center"></i>
+            <img src="" alt="" id="icon" />
 
             <br />
 
@@ -201,9 +216,10 @@
             </div>
           </div>
           <br />
+        </div>
           <footer> <a href="https://github.com/Karolinaa12" class="github-link" target="_blank">Open-source code</a> by Karolina</footer>
-
+        </div>
+        </div>
         <script src="src/index.js"></script>
-    </div>
   </body>
 </html>

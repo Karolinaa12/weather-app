@@ -51,6 +51,8 @@ displayedDate.innerHTML = formatDate(currentTime);
 //2 search engine
 //input city weather
 function displayWeatherCondition(response) {
+  let iconElement = document.querySelector("#icon");
+
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
@@ -63,6 +65,11 @@ function displayWeatherCondition(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
+  );
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
@@ -79,8 +86,6 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-input").value;
   search(city);
 }
-
-search("New York");
 
 let form = document.querySelector("#search-engine");
 form.addEventListener("submit", handleSubmit);
@@ -107,6 +112,7 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showLocation);
 }
 
+//Current location button function
 function showLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -117,5 +123,8 @@ function showLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
+//Current location button
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+search("Lisbon");

@@ -14,36 +14,35 @@ p {
 p {
   font-size: 18px;
 }
-#date {
-  margin-bottom: 0;
-}
-form {
-  margin: 50px 0px;
-}
-
-input[type="text"] {
-  width: 60%;
-  height: 40px;
-  padding: 30px;
-  box-sizing: border-box;
+input[type="search"] {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  height: 50px;
   border: 0;
-  border-radius: 20px;
+  border-radius: 6px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-  font-size: 18px;
 }
 
 button[type="submit"],
 #current-location-button {
-  padding: 15px 25px;
-  margin: 20px 0;
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 20px;
+  height: 50px;
   border: none;
   background-color: #b6bdee;
   color: #fff;
-  font-size: 14px;
-  border-radius: 30px;
+  border-radius: 6px;
   cursor: pointer;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
   transition: all 200ms ease-in-out;
+}
+
+#date {
+  margin-bottom: 0;
 }
 
 button:hover {
@@ -55,16 +54,6 @@ button:hover {
 
 .github-link {
   text-decoration: none;
-}
-.main-content {
-  margin: 50px auto;
-  max-width: 70%;
-}
-
-.main-menu-header {
-  margin: 10px auto;
-  border-radius: 10px;
-  max-width: 70%;
 }
 
 .card-body {
@@ -165,11 +154,6 @@ button:hover {
   margin: 10px auto;
 }
 
-.center {
-  text-align: center;
-  width: 100%;
-}
-
 .container .text-center {
   font-size: 18px;
   border: solid 1px #dbd8e3;
@@ -185,4 +169,16 @@ footer {
   color: #5c5470;
   text-align: center;
   font-size: 14px;
+}
+
+#icon {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
 }
