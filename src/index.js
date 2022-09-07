@@ -54,6 +54,34 @@ let units = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 axios.get(apiUrl).then(displayWeatherCondition);
 
+function backgroundColor() {
+  let hours = currentTime.getHours();
+  if (hours > 18) {
+    let backgroundEvening = document.querySelector("#background");
+    backgroundEvening.classList.add("night");
+  }
+  if (hours > 0 && hours < 6) {
+    let backgroundNight = document.querySelectorAll("#background");
+    backgroundNight.classList.add("night");
+  }
+}
+
+function backgroundColorForecast() {
+  let hours = currentTime.getHours();
+  if (hours > 18) {
+    let backgroundEveningForecast = document.querySelector(
+      "#backgroundForecast"
+    );
+    backgroundEveningForecast.classList.add("nightt");
+  }
+  if (hours > 0 && hours < 6) {
+    let backgroundNightForecast = document.querySelectorAll(
+      "#backgroundForecast"
+    );
+    backgroundNightForecast.classList.add("nightt");
+  }
+}
+
 //1 date
 function formatDate(date) {
   let hours = currentTime.getHours();
@@ -199,4 +227,6 @@ let celsiusTemperature = null;
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+backgroundColor();
+backgroundColorForecast();
 search("Lisbon");

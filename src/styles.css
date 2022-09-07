@@ -57,22 +57,20 @@ button:hover {
 }
 
 .card-body {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(242, 235, 243) 0%,
-    rgb(234, 241, 249) 90.1%
+  background: linear-gradient(
+    109.6deg,
+    rgb(177, 173, 219) 11.2%,
+    rgb(245, 226, 226) 91.1%
   );
 
   border-radius: 10px;
   transition: all 200ms ease-in-out;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
-.card-body:hover {
-  background: linear-gradient(
-    109.6deg,
-    rgb(177, 173, 219) 11.2%,
-    rgb(245, 226, 226) 91.1%
-  );
+
+.night,
+.nightt {
+  background: linear-gradient(-225deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
 }
 
 .descripton {
@@ -118,10 +116,15 @@ button:hover {
 #fahrenheit-link,
 #celsius-link {
   text-decoration: none;
+  color: #202124;
 }
+
 .active {
   color: #202124;
   cursor: default;
+}
+.active:hover {
+  color: #202124;
 }
 
 .weather-forecast {
@@ -147,38 +150,10 @@ button:hover {
   color: #70757a;
 }
 
-.temperature-other-days {
-  font-size: 30px;
-  padding: 10px;
-  margin: 10px;
-  margin-top: 0;
-  padding-top: 0;
-}
-
 .days {
   font-size: 20px;
   padding: 10px;
   margin: 10px;
-}
-
-.fa-sun {
-  font-size: 150px;
-  color: #5c5470;
-  margin: 50px auto;
-}
-
-.fa-cloud,
-.fa-cloud-sun,
-.sun-today {
-  font-size: 50px;
-  color: #5c5470;
-  margin: 20px;
-  margin-bottom: 5px;
-}
-
-.other-dates-icons {
-  font-size: 30px;
-  margin: 10px auto;
 }
 
 .container .text-center {
@@ -196,13 +171,14 @@ footer {
   color: #5c5470;
   text-align: center;
   font-size: 14px;
+  margin-top: 10px;
 }
 
 #icon {
   display: block;
   margin: 0 auto;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 .weather-app-wrapper {
