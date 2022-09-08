@@ -60,10 +60,6 @@ function backgroundColor() {
     let backgroundEvening = document.querySelector("#background");
     backgroundEvening.classList.add("night");
   }
-  if (hours > 0 && hours < 6) {
-    let backgroundNight = document.querySelectorAll("#background");
-    backgroundNight.classList.add("night");
-  }
 }
 
 function backgroundColorForecast() {
@@ -73,12 +69,6 @@ function backgroundColorForecast() {
       "#backgroundForecast"
     );
     backgroundEveningForecast.classList.add("nightt");
-  }
-  if (hours > 0 && hours < 6) {
-    let backgroundNightForecast = document.querySelectorAll(
-      "#backgroundForecast"
-    );
-    backgroundNightForecast.classList.add("nightt");
   }
 }
 
